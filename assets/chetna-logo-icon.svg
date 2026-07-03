@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 120" width="124" height="120">
+  <defs>
+    <linearGradient id="cycleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7C7B"></stop>
+      <stop offset="100%" stop-color="#17A398"></stop>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5FAD41"></stop>
+      <stop offset="100%" stop-color="#8BC34A"></stop>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M 24.3 47 A 38 38 0 0 1 95.7 47" fill="none" stroke="url(#cycleGrad)" stroke-width="9" stroke-linecap="round"></path>
+    <path d="M 95.7 73 A 38 38 0 0 1 24.3 73" fill="none" stroke="url(#leafGrad)" stroke-width="9" stroke-linecap="round"></path>
+    <polyline points="22,60 42,60 52,40 64,78 72,60 97,60" fill="none" stroke="#0E3B43" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+    <path d="M 97 60 C 105 49 112 50 117 39 C 105 37.5 95.5 45 95.5 57.5 Z" fill="url(#leafGrad)"></path>
+  </g>
+</svg>

@@ -1,0 +1,2736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chetna Metabolics | Doctor-Led Weight Loss, Fitness &amp; Nutrition in Navi Mumbai</title>
+  <meta name="description" content="Medically supervised weight management by Dr. Mukesh M Chandra (physician, 15+ yrs). Nutrition, exercise, lifestyle &amp; prevention — join the next batch in Navi Mumbai." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Chetna Metabolics | Doctor-Led Weight Loss &amp; Nutrition in Navi Mumbai" />
+  <meta property="og:description" content="A doctor-led fitness and nutrition centre where your weight-loss journey is designed, monitored, and adjusted by a physician with 15+ years of clinical experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photo-outdoor-group.jpg" />
+  <link rel="icon" href="assets/chetna-logo-icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================
+       CSS RESET & BASE
+    ========================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 18px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #0E3B43;
+      background: #F7FAF9;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #8BC34A;
+      color: #0E3B43;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================================
+       CSS CUSTOM PROPERTIES
+    ========================================= */
+    :root {
+      --primary: #0E7C7B;
+      --primary-dark: #0E3B43;
+      --accent: #5FAD41;
+      --accent-light: #8BC34A;
+      --secondary-text: #4A6A70;
+      --bg: #F7FAF9;
+      --dark-bg: #0A2B32;
+      --darkest-bg: #06202A;
+      --white: #ffffff;
+      --radius-pill: 999px;
+      --radius-card: 28px;
+      --radius-section: 48px;
+      --transition-base: 0.25s ease;
+    }
+
+    /* =========================================
+       KEYFRAME ANIMATIONS
+    ========================================= */
+    @keyframes chetnaMarquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    @keyframes chetnaPulse {
+      0%   { stroke-dashoffset: 1800; }
+      60%  { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -1800; }
+    }
+
+    @keyframes chetnaFloat {
+      0%, 100% { transform: translateY(0px) rotate(-3deg); }
+      50%       { transform: translateY(-16px) rotate(-3deg); }
+    }
+
+    @keyframes chetnaFloat2 {
+      0%, 100% { transform: translateY(0px) rotate(4deg); }
+      50%       { transform: translateY(-22px) rotate(4deg); }
+    }
+
+    @keyframes chetnaSpin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes chetnaGlow {
+      0%, 100% { box-shadow: 0 16px 48px rgba(139,195,74,0.45); }
+      50%       { box-shadow: 0 16px 72px rgba(139,195,74,0.85); }
+    }
+
+    @keyframes chetnaBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
+    @keyframes chetnaDash {
+      to { stroke-dashoffset: -28; }
+    }
+
+    @keyframes chetnaFadeUp {
+      from { opacity: 0; transform: translateY(34px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================
+       PLACEHOLDER STYLES
+    ========================================= */
+    .placeholder {
+      font-family: monospace;
+      font-size: 13px;
+      background: #FFF3CD;
+      color: #7a6114;
+      border: 1px dashed #C9A227;
+      border-radius: 6px;
+      padding: 2px 10px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .placeholder-block {
+      font-family: monospace;
+      font-size: 14px;
+      background: #FFF3CD;
+      color: #7a6114;
+      border: 1px dashed #C9A227;
+      border-radius: 8px;
+      padding: 10px 18px;
+      display: inline-block;
+      margin: 6px 0;
+    }
+
+    .placeholder-dark {
+      font-family: monospace;
+      font-size: 13px;
+      background: rgba(255,243,205,0.92);
+      color: #7a6114;
+      border: 1px dashed #C9A227;
+      border-radius: 6px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    /* =========================================
+       FAQ DETAILS/SUMMARY
+    ========================================= */
+    details > summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary .faq-plus {
+      transform: rotate(45deg);
+    }
+
+    /* =========================================
+       HEADER
+    ========================================= */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: transparent;
+      transition: background 0.4s ease, border-color 0.4s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .site-header.scrolled {
+      background: rgba(6,32,42,0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom-color: rgba(255,255,255,0.06);
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, #0E7C7B, #8BC34A);
+      z-index: 101;
+      transition: width 0.1s linear;
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 16px 40px;
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      justify-self: start;
+    }
+
+    .header-logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+      flex-shrink: 0;
+    }
+
+    .header-logo-icon img {
+      width: 24px;
+    }
+
+    .header-logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.14em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    /* Glass pill nav */
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 6px;
+      border-radius: 999px;
+      position: relative;
+    }
+
+    .header-nav::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.04));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .header-nav {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header-nav a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 7px 15px;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-nav a:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* CTA pill */
+    .header-cta {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-cta:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    .cta-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #8BC34A;
+      animation: chetnaBlink 1.6s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      justify-self: end;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile nav overlay */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(6,32,42,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      padding: 18px 40px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav a:hover {
+      color: #8BC34A;
+    }
+
+    .mobile-nav .mobile-cta {
+      margin-top: 24px;
+      background: #8BC34A;
+      color: #0E3B43;
+      border-radius: 999px;
+      font-size: 14px;
+      padding: 14px 40px;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: #06202A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/photo-outdoor-group.jpg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.08);
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,32,42,0.72) 0%, rgba(6,32,42,0.30) 45%, rgba(6,32,42,0.80) 100%);
+      z-index: 1;
+    }
+
+    /* ECG SVG behind overlay */
+    .hero-ecg {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      opacity: 0.18;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero-ecg svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-ecg path {
+      stroke: #5FAD41;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 1800;
+      stroke-dashoffset: 1800;
+      animation: chetnaPulse 5s ease-in-out infinite;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 0 40px;
+    }
+
+    .hero-top {
+      text-align: center;
+      padding-top: 138px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.62);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #5FAD41;
+      flex-shrink: 0;
+      animation: chetnaBlink 1.6s ease-in-out infinite;
+    }
+
+    .hero-h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: clamp(40px, 5.4vw, 72px);
+      color: #ffffff;
+      line-height: 1.08;
+    }
+
+    .hero-h1 .line-two {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hero-bottom {
+      text-align: center;
+      padding-bottom: 58px;
+    }
+
+    .hero-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.80);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .hero-cta-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #0E3B43;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    }
+
+    .hero-cta-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.32);
+    }
+
+    .hero-trust {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hero-trust-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5FAD41;
+      flex-shrink: 0;
+    }
+
+    /* =========================================
+       SECTION SHARED UTILITIES
+    ========================================= */
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(14,124,123,0.35), transparent);
+    }
+
+    .section-label-lime {
+      color: #8BC34A;
+    }
+
+    .section-label-lime::after {
+      background: linear-gradient(90deg, rgba(139,195,74,0.35), transparent);
+    }
+
+    .outlined-text {
+      -webkit-text-stroke: 2px #0E7C7B;
+      color: transparent;
+    }
+
+    .outlined-text-green {
+      -webkit-text-stroke: 2px #5FAD41;
+      color: transparent;
+    }
+
+    /* =========================================
+       WHY METABOLIC FITNESS
+    ========================================= */
+    .why-section {
+      padding: 120px 0 100px;
+      background: var(--bg);
+    }
+
+    .why-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 40px;
+    }
+
+    .why-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+
+    .why-body {
+      font-size: 17px;
+      color: var(--secondary-text);
+      max-width: 740px;
+      line-height: 1.75;
+      margin-bottom: 64px;
+    }
+
+    .why-rows {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .why-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1 1 min(100%, 520px);
+      padding: 28px 20px 28px 20px;
+      border-radius: 16px;
+      transition: background 0.25s ease, padding-left 0.25s ease;
+      cursor: default;
+    }
+
+    .why-row:hover {
+      background: #ffffff;
+      padding-left: 24px;
+      box-shadow: 0 4px 24px rgba(14,124,123,0.06);
+    }
+
+    .why-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+      margin-top: 4px;
+      -webkit-text-stroke: 1px currentColor;
+      color: transparent;
+    }
+
+    .why-num-teal { -webkit-text-stroke: 1.5px #0E7C7B; }
+    .why-num-green { -webkit-text-stroke: 1.5px #5FAD41; }
+    .why-num-lime { -webkit-text-stroke: 1.5px #8BC34A; }
+
+    .why-row-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0E3B43;
+      margin-bottom: 6px;
+    }
+
+    .why-row-body {
+      font-size: 15px;
+      color: var(--secondary-text);
+      line-height: 1.65;
+    }
+
+    /* =========================================
+       MARQUEE DIVIDER
+    ========================================= */
+    .marquee-section {
+      overflow: hidden;
+      padding: 28px 0;
+      background: var(--bg);
+      border-top: 1px solid rgba(14,124,123,0.08);
+      border-bottom: 1px solid rgba(14,124,123,0.08);
+    }
+
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: chetnaMarquee 28s linear infinite;
+      will-change: transform;
+    }
+
+    .marquee-item {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(64px, 8vw, 130px);
+      -webkit-text-stroke: 1.5px rgba(14,124,123,0.30);
+      color: transparent;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      padding: 0 40px;
+      flex-shrink: 0;
+    }
+
+    /* =========================================
+       METHOD SECTION
+    ========================================= */
+    .method-section {
+      background: #0A2B32;
+      border-radius: var(--radius-section) var(--radius-section) 0 0;
+      padding: 100px 0 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .method-bg-spin {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 640px;
+      height: 640px;
+      opacity: 0.06;
+      animation: chetnaSpin 120s linear infinite;
+      pointer-events: none;
+    }
+
+    .method-bg-spin img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .method-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 40px;
+    }
+
+    .method-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .method-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.55);
+      max-width: 680px;
+      line-height: 1.75;
+      margin-bottom: 64px;
+    }
+
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 24px;
+    }
+
+    .method-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius-card);
+      padding: 40px 36px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background 0.25s ease, border-color 0.25s ease;
+      position: relative;
+    }
+
+    .method-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(139,195,74,0.25);
+    }
+
+    .method-card-icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .method-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.90);
+      margin-bottom: 14px;
+    }
+
+    .method-card-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.60);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .method-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .method-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(139,195,74,0.12);
+      color: #8BC34A;
+      border: 1px solid rgba(139,195,74,0.22);
+    }
+
+    /* =========================================
+       PROGRAMMES
+    ========================================= */
+    .programmes-section {
+      background: var(--bg);
+      border-radius: var(--radius-section) var(--radius-section) 0 0;
+      padding: 100px 0 120px;
+      position: relative;
+    }
+
+    .programmes-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 40px;
+    }
+
+    .programmes-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .programmes-sub {
+      font-size: 17px;
+      color: var(--secondary-text);
+      max-width: 620px;
+      line-height: 1.75;
+      margin-bottom: 64px;
+    }
+
+    .programmes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .programmes-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .programmes-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 16px;
+      color: #0E3B43;
+      line-height: 1.5;
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #5FAD41, #8BC34A);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: #ffffff;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .pricing-card {
+      background: #0A2B32;
+      border-radius: var(--radius-card);
+      padding: 44px 40px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(139,195,74,0.15);
+      color: #8BC34A;
+      border: 1px solid rgba(139,195,74,0.25);
+      margin-bottom: 24px;
+    }
+
+    .pricing-value {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .pricing-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 28px 0;
+    }
+
+    .batch-status {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .batch-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .batch-done { color: rgba(255,255,255,0.50); }
+    .batch-current { color: rgba(255,255,255,0.85); }
+    .batch-next { color: #8BC34A; }
+
+    .batch-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .batch-indicator-done { background: rgba(255,255,255,0.20); }
+    .batch-indicator-current {
+      background: #8BC34A;
+      animation: chetnaBlink 1.6s ease-in-out infinite;
+    }
+    .batch-indicator-next { border: 2px solid #8BC34A; background: transparent; }
+
+    .programmes-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #5FAD41, #8BC34A);
+      color: #0E3B43;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: chetnaGlow 3s ease-in-out infinite;
+    }
+
+    .programmes-cta:hover {
+      transform: scale(1.03);
+    }
+
+    /* =========================================
+       ABOUT / DR. CHANDRA
+    ========================================= */
+    .about-section {
+      padding: 100px 0 120px;
+      background: var(--bg);
+    }
+
+    .about-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 0;
+      padding: 0 40px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo-frame {
+      position: relative;
+    }
+
+    .about-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      right: 16px;
+      bottom: 16px;
+      border: 2px solid rgba(14,124,123,0.25);
+      border-radius: 24px;
+      z-index: 0;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: 50% 100%;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-badge {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 88px;
+      height: 88px;
+      background: linear-gradient(135deg, #5FAD41, #8BC34A);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 8px 32px rgba(95,173,65,0.40);
+      animation: chetnaFloat 4s ease-in-out infinite;
+    }
+
+    .about-badge-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .about-badge-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.80);
+      letter-spacing: 0.06em;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .about-content {
+      padding-top: 20px;
+    }
+
+    .about-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 4.5vw, 62px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+      margin-top: 20px;
+    }
+
+    .about-body {
+      font-size: 16px;
+      color: var(--secondary-text);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .about-pullquote {
+      border-left: 3px solid #5FAD41;
+      padding: 16px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #0E3B43;
+      font-weight: 500;
+      line-height: 1.6;
+      margin: 28px 0;
+      background: rgba(95,173,65,0.06);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .about-reg {
+      font-size: 13px;
+      color: var(--secondary-text);
+      margin-top: 20px;
+    }
+
+    /* =========================================
+       HOW IT WORKS
+    ========================================= */
+    .how-section {
+      padding: 100px 0 120px;
+      background: #0A2B32;
+    }
+
+    .how-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 40px;
+    }
+
+    .how-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 64px;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      position: relative;
+      margin-bottom: 64px;
+    }
+
+    .how-steps::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(16.67% + 12px);
+      right: calc(16.67% + 12px);
+      height: 2px;
+      border-top: 2px dashed rgba(139,195,74,0.35);
+      z-index: 0;
+    }
+
+    .how-step {
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .how-step-num {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(139,195,74,0.12);
+      border: 2px solid rgba(139,195,74,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #8BC34A;
+      margin: 0 auto 24px;
+    }
+
+    .how-step-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.90);
+      margin-bottom: 12px;
+    }
+
+    .how-step-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+
+    .how-cta-wrap {
+      text-align: center;
+    }
+
+    .how-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #5FAD41, #8BC34A);
+      color: #0E3B43;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: chetnaGlow 3s ease-in-out infinite;
+    }
+
+    .how-cta:hover {
+      transform: scale(1.04);
+    }
+
+    /* =========================================
+       LIFE AT CHETNA
+    ========================================= */
+    .life-section {
+      padding: 100px 0 120px;
+      background: var(--bg);
+    }
+
+    .life-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      padding: 0 40px;
+    }
+
+    .life-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .life-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .life-ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 2px solid rgba(14,124,123,0.25);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .life-ig-btn:hover {
+      background: rgba(14,124,123,0.06);
+      border-color: var(--primary);
+    }
+
+    .life-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+
+    .life-photo-grid .photo-full {
+      grid-column: 1 / -1;
+      height: 420px;
+    }
+
+    .life-photo-grid .photo-cell {
+      height: 260px;
+    }
+
+    .life-photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .life-photo-grid .photo-full img {
+      object-position: 50% 60%;
+    }
+
+    .life-photo-grid .photo-outdoor img {
+      object-position: 50% 70%;
+    }
+
+    .life-photo-grid .photo-team img {
+      object-position: 50% 100%;
+    }
+
+    .life-photo-grid a {
+      display: block;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .life-photo-grid a:hover img {
+      transform: scale(1.04);
+    }
+
+    /* =========================================
+       FAQ
+    ========================================= */
+    .faq-section {
+      padding: 100px 0 120px;
+      background: var(--bg);
+      border-top: 1px solid rgba(14,124,123,0.08);
+    }
+
+    .faq-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 0;
+      padding: 0 40px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .faq-left {
+      position: sticky;
+      top: 100px;
+    }
+
+    .faq-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-top: 20px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .faq-item {
+      border-radius: 16px;
+      overflow: hidden;
+      transition: background 0.2s ease;
+    }
+
+    .faq-item[open] {
+      background: #ffffff;
+    }
+
+    .faq-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: #0E3B43;
+      user-select: none;
+    }
+
+    .faq-summary:hover {
+      color: var(--primary);
+    }
+
+    .faq-plus {
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--primary);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      line-height: 1;
+    }
+
+    .faq-body {
+      padding: 0 24px 24px;
+      font-size: 15px;
+      color: var(--secondary-text);
+      line-height: 1.7;
+    }
+
+    /* =========================================
+       JOIN / CONTACT
+    ========================================= */
+    .join-section {
+      background: #0A2B32;
+      padding: 100px 0 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .join-ecg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.10;
+      pointer-events: none;
+    }
+
+    .join-ecg svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .join-ecg path {
+      stroke: #5FAD41;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 1800;
+      stroke-dashoffset: 1800;
+      animation: chetnaPulse 6s ease-in-out infinite;
+    }
+
+    .join-section .section-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .join-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(32px, 4.5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      max-width: 780px;
+      margin-bottom: 20px;
+    }
+
+    .join-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.55);
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    .join-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #5FAD41, #8BC34A);
+      color: #0E3B43;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      animation: chetnaGlow 3s ease-in-out infinite;
+      margin-bottom: 64px;
+    }
+
+    .join-cta:hover {
+      transform: scale(1.04);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-text {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+
+    .contact-text a {
+      color: rgba(255,255,255,0.90);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-text a:hover {
+      color: #8BC34A;
+    }
+
+    .contact-map {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    .site-footer {
+      background: #06202A;
+      padding: 72px 40px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 64px;
+      margin-bottom: 64px;
+    }
+
+    .footer-logo-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo-icon img {
+      width: 26px;
+    }
+
+    .footer-logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.14em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      font-size: 15px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      max-width: 280px;
+    }
+
+    .footer-col-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.40);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #8BC34A;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin-bottom: 32px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.28);
+      line-height: 1.5;
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      color: rgba(255,255,255,0.20);
+      max-width: 560px;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       FLOATING WHATSAPP
+    ========================================= */
+    .float-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+      text-decoration: none;
+      z-index: 90;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.10);
+      box-shadow: 0 12px 40px rgba(37,211,102,0.60);
+    }
+
+    .float-wa svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 900px) {
+      .header-nav {
+        display: none;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner {
+        grid-template-columns: 1fr auto;
+        padding: 16px 24px;
+      }
+
+      .hero-content {
+        padding: 0 24px;
+      }
+
+      .hero-top {
+        padding-top: 110px;
+      }
+
+      .programmes-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-photo-wrap {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .how-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .how-steps::before {
+        display: none;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .faq-left {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .life-photo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .life-photo-grid .photo-full {
+        height: 280px;
+      }
+
+      .life-photo-grid .photo-cell {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-inner {
+        padding: 0 20px;
+      }
+
+      .why-section .section-label,
+      .method-section .section-label,
+      .programmes-section .section-label,
+      .how-section .section-label,
+      .life-section .section-label,
+      .faq-section .section-label {
+        padding: 0 20px;
+      }
+
+      .why-section {
+        padding: 80px 0 60px;
+      }
+
+      .method-section {
+        padding: 72px 0 80px;
+        border-radius: 32px 32px 0 0;
+      }
+
+      .programmes-section {
+        padding: 72px 0 80px;
+        border-radius: 32px 32px 0 0;
+      }
+
+      .about-section {
+        padding: 72px 0 80px;
+      }
+
+      .how-section {
+        padding: 72px 0 80px;
+      }
+
+      .life-section {
+        padding: 72px 0 80px;
+      }
+
+      .faq-section {
+        padding: 72px 0 80px;
+      }
+
+      .join-section {
+        padding: 72px 0 80px;
+      }
+
+      .hero-h1 {
+        font-size: clamp(32px, 8vw, 52px);
+      }
+
+      .life-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .life-photo-grid .photo-full {
+        height: 240px;
+      }
+
+      .life-photo-grid .photo-cell {
+        height: 200px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-disclaimer {
+        text-align: left;
+      }
+
+      .site-footer {
+        padding: 56px 20px 32px;
+      }
+
+      .contact-map {
+        height: 220px;
+      }
+
+      .life-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .marquee-track {
+        animation: none;
+      }
+
+      [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="header-inner">
+      <a href="#top" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="assets/chetna-logo-icon.svg" alt="Chetna Metabolics icon" width="24" height="24" />
+        </div>
+        <span class="header-logo-text">Chetna</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#method">Method</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join">Contact</a>
+      </nav>
+
+      <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="header-cta">
+        <span class="cta-dot"></span>
+        Join Batch 03
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="#method" class="mobile-nav-link">Method</a>
+    <a href="#programmes" class="mobile-nav-link">Programmes</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+    <a href="#join" class="mobile-nav-link">Contact</a>
+    <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="mobile-nav-link mobile-cta">Join Batch 03</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- ECG Pulse SVG -->
+    <div class="hero-ecg" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,160 L120,160 L160,160 L180,60 L200,260 L220,100 L240,220 L260,160 L400,160 L440,160 L460,60 L480,260 L500,100 L520,220 L540,160 L680,160 L720,160 L740,60 L760,260 L780,100 L800,220 L820,160 L960,160 L1000,160 L1020,60 L1040,260 L1060,100 L1080,220 L1100,160 L1240,160 L1280,160 L1300,60 L1320,260 L1340,100 L1360,220 L1380,160 L1440,160" />
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-top">
+        <div class="hero-eyebrow" data-reveal="0">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          Medically Supervised Weight Management
+        </div>
+        <h1 class="hero-h1" data-reveal="1">
+          You vs. You. Everyday.<br />
+          <span class="line-two">Doctor-led. Never guesswork.</span>
+        </h1>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-body" data-reveal="2">
+          Your transformation is dictated by real biomarkers — blood panels, baseline metrics, and 15+ years of clinical judgment. Each programme is personal, supervised, and wholly yours.
+        </p>
+        <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" data-reveal="3">
+          Join the Batch 03 Waitlist
+        </a>
+        <div class="hero-trust" data-reveal="4">
+          <span class="hero-trust-dot" aria-hidden="true"></span>
+          Doctor-supervised &middot; Blood-panel backed &middot; Batch 02 at full capacity
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY METABOLIC FITNESS -->
+  <section class="why-section" id="why" aria-labelledby="why-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">01 &mdash; The Problem</div>
+      <h2 class="why-h2" id="why-heading" data-reveal="1">
+        <span class="outlined-text">Diets Fail.</span><br />
+        Metabolism Doesn't Lie.
+      </h2>
+      <p class="why-body" data-reveal="2">
+        Most weight-loss attempts fail because they treat the symptom &mdash; weight &mdash; instead of the cause: a slow, disrupted metabolic engine. At Chetna, every strategy is dictated by absolute baseline metrics, comprehensive medical history, and full-body blood panels &mdash; lipid, thyroid, and glycemic markers. Fat loss and aesthetic change are natural byproducts of a fundamentally repaired biological system.
+      </p>
+
+      <div class="why-rows">
+        <div class="why-row" data-reveal="0">
+          <div>
+            <span class="why-num why-num-teal">01</span>
+          </div>
+          <div>
+            <div class="why-row-title">Biomarkers, not guesswork</div>
+            <p class="why-row-body">Every strategy is dictated by baseline metrics, medical history, and diagnostic blood panels &mdash; lipid, thyroid, glycemic.</p>
+          </div>
+        </div>
+
+        <div class="why-row" data-reveal="1">
+          <div>
+            <span class="why-num why-num-green">02</span>
+          </div>
+          <div>
+            <div class="why-row-title">Fuel the engine, never starve it</div>
+            <p class="why-row-body">We reject starvation and crash dieting. We correctly fuel your internal machinery and systematically accelerate your baseline metabolic rate.</p>
+          </div>
+        </div>
+
+        <div class="why-row" data-reveal="2">
+          <div>
+            <span class="why-num why-num-lime">03</span>
+          </div>
+          <div>
+            <div class="why-row-title">One team, one canopy</div>
+            <p class="why-row-body">Medical practitioners, clinical nutrition specialists, certified functional fitness instructors, and endurance coaches &mdash; one collaborative point of oversight.</p>
+          </div>
+        </div>
+
+        <div class="why-row" data-reveal="3">
+          <div>
+            <span class="why-num why-num-teal">04</span>
+          </div>
+          <div>
+            <div class="why-row-title">Disease reversibility</div>
+            <p class="why-row-body">Type 2 diabetes, hypertension, fatty liver &mdash; many lifestyle diseases can be pushed into remission once the metabolism is repaired. We aim for reversal, not lifelong management.</p>
+          </div>
+        </div>
+
+        <div class="why-row" data-reveal="4">
+          <div>
+            <span class="why-num why-num-green">05</span>
+          </div>
+          <div>
+            <div class="why-row-title">Age reversibility</div>
+            <p class="why-row-body">Your biological age is not your birthday. Strength, mobility, and metabolic markers can be turned back &mdash; we track them, and train them, in that direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE DIVIDER -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Clinical Mapping &#10022; Metabolic Nutrition &#10022; Hybrid Movement &#10022;&nbsp;</span>
+      <span class="marquee-item">Clinical Mapping &#10022; Metabolic Nutrition &#10022; Hybrid Movement &#10022;&nbsp;</span>
+      <span class="marquee-item">Clinical Mapping &#10022; Metabolic Nutrition &#10022; Hybrid Movement &#10022;&nbsp;</span>
+      <span class="marquee-item">Clinical Mapping &#10022; Metabolic Nutrition &#10022; Hybrid Movement &#10022;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- THE CHETNA METHOD -->
+  <section class="method-section" id="method" aria-labelledby="method-heading">
+    <div class="method-bg-spin" aria-hidden="true">
+      <img src="assets/chetna-logo-icon.svg" alt="" />
+    </div>
+
+    <div class="section-inner">
+      <div class="section-label section-label-lime" data-reveal="0">02 &mdash; The Chetna Method</div>
+      <h2 class="method-h2" id="method-heading" data-reveal="1">
+        <span class="outlined-text-green">One Method.</span><br />
+        <span style="color:#ffffff;">Three Pillars.</span>
+      </h2>
+      <p class="method-sub" data-reveal="2">
+        A framework built to transition 10,000 people away from fad diets and short-term fixes &mdash; into permanent, scientifically validated lifestyle change, personalised by Dr. Chandra to your body and your history.
+      </p>
+
+      <div class="method-cards">
+        <div class="method-card" data-reveal="0">
+          <span class="method-card-icon">&#129516;</span>
+          <div class="method-card-title">Clinical Mapping</div>
+          <p class="method-card-body">Extensive biometric collection and diagnostic blood panels pinpoint your exact physiological parameters &mdash; and any joint constraints &mdash; before day one.</p>
+          <div class="method-tags">
+            <span class="method-tag">Lipid</span>
+            <span class="method-tag">Thyroid</span>
+            <span class="method-tag">Glycemic</span>
+          </div>
+        </div>
+
+        <div class="method-card" data-reveal="1">
+          <span class="method-card-icon">&#129361;</span>
+          <div class="method-card-title">Metabolic Nutrition</div>
+          <p class="method-card-body">Easy-to-follow, custom macro-split diet charts mapped to your unique metabolic profile &mdash; systematically building sustainable eating behaviour.</p>
+          <div class="method-tags">
+            <span class="method-tag">Custom Macros</span>
+            <span class="method-tag">No Starvation</span>
+          </div>
+        </div>
+
+        <div class="method-card" data-reveal="2">
+          <span class="method-card-icon">&#127939;</span>
+          <div class="method-card-title">Hybrid Movement</div>
+          <p class="method-card-body">A balanced weekly conditioning matrix &mdash; high-energy metabolic acceleration, structural realignment and core flexibility, and aerobic capacity building.</p>
+          <div class="method-tags">
+            <span class="method-tag">Zumba</span>
+            <span class="method-tag">Yoga</span>
+            <span class="method-tag">Walk-Run</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES -->
+  <section class="programmes-section" id="programmes" aria-labelledby="programmes-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">03 &mdash; Programmes</div>
+      <h2 class="programmes-h2" id="programmes-heading" data-reveal="1">
+        <span class="outlined-text-green">Small Batches.</span><br />
+        Big Change.
+      </h2>
+      <p class="programmes-sub" data-reveal="2">
+        Every batch runs for 3 months with strictly capped admissions to preserve clinical attention. Batch 02 is at full capacity &mdash; Batch 03 opens to the priority waitlist first. Information sessions are held at our clinic; exercise, physio, and activity sessions take place outdoors in nature.
+      </p>
+
+      <div class="programmes-grid">
+        <ul class="programmes-checklist" data-reveal="3">
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Medical assessment &amp; full blood panel
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Personalised nutrition plan &amp; macro splits
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Daily sessions <span class="placeholder" style="margin-left:6px;">[SESSION TIMINGS]</span>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Progress tracking &amp; periodic biomarker review
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Lifestyle coaching &amp; behavioural support
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 12 12" aria-hidden="true"><polyline points="2,6 5,9 10,3" /></svg>
+            </div>
+            Cohort community &amp; accountability group
+          </li>
+        </ul>
+
+        <div class="pricing-card" data-reveal="4">
+          <div class="pricing-badge">Batch 03 &mdash; Priority Waitlist</div>
+          <div class="pricing-value">
+            <span style="font-family: Montserrat, sans-serif; font-weight: 900; font-size: 48px; color: #ffffff; line-height: 1;">&rupee;6,000</span>
+            <span style="font-size: 16px; color: rgba(255,255,255,0.6); display: block; margin-top: 6px;">for 3 months (per batch)</span>
+          </div>
+
+          <div class="pricing-divider"></div>
+
+          <div class="batch-status">
+            <div class="batch-item batch-done">
+              <span class="batch-indicator batch-indicator-done" aria-hidden="true"></span>
+              Batch 01 &mdash; completed, measurable transformations
+            </div>
+            <div class="batch-item batch-current">
+              <span class="batch-indicator batch-indicator-current" aria-hidden="true"></span>
+              Batch 02 &mdash; running at full capacity
+            </div>
+            <div class="batch-item batch-next">
+              <span class="batch-indicator batch-indicator-next" aria-hidden="true"></span>
+              Batch 03 &mdash; priority waitlist open
+            </div>
+          </div>
+
+          <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="programmes-cta">
+            Join the Priority Waitlist &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET DR. CHANDRA -->
+  <section class="about-section" id="about" aria-labelledby="about-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">04 &mdash; Meet Dr. Mukesh M Chandra</div>
+      <div class="about-grid">
+        <div class="about-photo-wrap" data-reveal="1">
+          <div class="about-photo-frame">
+            <img
+              src="assets/photo-team.jpg"
+              alt="Dr. Mukesh M Chandra, medical director of Chetna Metabolics"
+              class="about-photo"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-badge" aria-label="15 plus years experience">
+            <span class="about-badge-num">15+</span>
+            <span class="about-badge-label">Years<br>Clinical</span>
+          </div>
+        </div>
+
+        <div class="about-content" data-reveal="2">
+          <h2 class="about-h2" id="about-heading">
+            <span class="outlined-text-green">Your Coach</span><br />
+            Is a Doctor.
+          </h2>
+          <p class="about-body">
+            Dr. Mukesh M Chandra is a physician with over 15 years of clinical experience in metabolic health, lifestyle medicine, and disease reversal. Qualifications: <span class="placeholder">[QUALIFICATIONS &mdash; MBBS/MD etc.]</span>
+          </p>
+          <p class="about-body">
+            His approach is uncompromising: every patient is mapped biometrically before a single recommendation is made. Diet charts, movement plans, and lifestyle protocols are derived entirely from blood panel data and clinical history &mdash; never from generic templates.
+          </p>
+
+          <blockquote class="about-pullquote">
+            "Weight loss is a byproduct. Metabolic repair is the mission. When the engine runs right, everything else follows."
+          </blockquote>
+
+          <p class="about-reg">
+            Registration No.: <span class="placeholder">[REGISTRATION NO.]</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how" aria-labelledby="how-heading">
+    <div class="section-inner">
+      <div class="section-label section-label-lime" data-reveal="0">05 &mdash; How It Works</div>
+      <h2 class="how-h2" id="how-heading" data-reveal="1">
+        <span class="outlined-text-green">Three Steps.</span><br />
+        <span style="color:#ffffff;">Permanent Change.</span>
+      </h2>
+
+      <div class="how-steps">
+        <div class="how-step" data-reveal="0">
+          <div class="how-step-num" aria-hidden="true">1</div>
+          <div class="how-step-title">Fill the Form</div>
+          <p class="how-step-body">Tell us about yourself and your health goals (2 minutes) &mdash; you're added to the Batch 03 priority list.</p>
+        </div>
+
+        <div class="how-step" data-reveal="1">
+          <div class="how-step-num" aria-hidden="true">2</div>
+          <div class="how-step-title">Meet the Doctor</div>
+          <p class="how-step-body">Medical orientation and biometric mapping &mdash; blood panels, baseline metrics, full history.</p>
+        </div>
+
+        <div class="how-step" data-reveal="2">
+          <div class="how-step-num" aria-hidden="true">3</div>
+          <div class="how-step-title">Join Batch 03</div>
+          <p class="how-step-body">Start training with your cohort and your personalised plan the day your batch opens.</p>
+        </div>
+      </div>
+
+      <div class="how-cta-wrap" data-reveal="3">
+        <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="how-cta">
+          Join the Priority Waitlist &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFE AT CHETNA -->
+  <section class="life-section" id="life" aria-labelledby="life-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">06 &mdash; Life at Chetna</div>
+
+      <div class="life-header-row">
+        <h2 class="life-h2" id="life-heading" data-reveal="1">
+          <span class="outlined-text-green">Sweat Outside.</span><br />
+          Smile Often.
+        </h2>
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="life-ig-btn" data-reveal="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Follow on Instagram
+        </a>
+      </div>
+
+      <div class="life-photo-grid" data-reveal="3">
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-full">
+          <img src="assets/photo-yoga-day.jpg" alt="Yoga day session at Chetna Metabolics" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-cell">
+          <img src="assets/photo-clinic-session.jpg" alt="Clinical session at Chetna Metabolics" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-cell">
+          <img src="assets/photo-trophy.jpg" alt="Trophy and milestones at Chetna Metabolics" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-cell photo-outdoor">
+          <img src="assets/photo-outdoor-group.jpg" alt="Outdoor group training at Chetna Metabolics" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-cell photo-team">
+          <img src="assets/photo-team.jpg" alt="The Chetna team" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">08 &mdash; FAQ</div>
+      <div class="faq-grid">
+        <div class="faq-left" data-reveal="1">
+          <h2 class="faq-h2" id="faq-heading">
+            Questions,<br />
+            <span class="outlined-text">Answered.</span>
+          </h2>
+        </div>
+
+        <div class="faq-list" data-reveal="2">
+          <details class="faq-item">
+            <summary class="faq-summary">
+              What makes Chetna different from other fitness programmes?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Chetna is run by a physician &mdash; not a personal trainer or nutritionist alone. Every programme begins with a medical assessment and comprehensive blood panel. Your diet, exercise, and lifestyle plan are derived from clinical data, not generic templates. This is metabolic fitness, not guesswork.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              Do I need to have a medical condition to join?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              No. Chetna is designed for anyone who wants to optimise their health &mdash; whether you have a metabolic condition like Type 2 diabetes or hypertension, or simply want to lose weight, build endurance, and feel better. The clinical approach benefits everyone.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              What does a typical week look like in the programme?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Each batch runs for 3 months. Sessions run daily at <span class="placeholder">[SESSION TIMINGS]</span>. Information sessions and clinical check-ins are conducted at our clinic in Kopar Khairane. Exercise, physiotherapy, and activity sessions are held at different outdoor locations in nature. Each week includes a blend of metabolic conditioning (Zumba-style), yoga and core flexibility, and aerobic walk-run training, plus weekly check-ins and personalised nutrition guidance.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              Are the sessions in-person or online?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Chetna operates as an in-person programme from our centre in Kopar Khairane, Navi Mumbai. The medical consultations and group sessions are conducted face-to-face to ensure proper supervision and monitoring.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              What results can I realistically expect?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Results vary by individual baseline and adherence. What we can promise is that your progress is tracked using objective biomarkers &mdash; not just the scale. Batch 01 participants saw measurable improvements in metabolic markers, body composition, and energy levels. Many reported significant reduction in medication requirements for lifestyle diseases.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              How do I join?
+              <span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Current batches are at full capacity. Join the Batch 03 priority waitlist and we'll contact you first when seats open. Fill in the short form &mdash; it takes less than 2 minutes.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN / CONTACT -->
+  <section class="join-section" id="join" aria-labelledby="join-heading">
+    <!-- ECG Pulse -->
+    <div class="join-ecg" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,160 L120,160 L160,160 L180,60 L200,260 L220,100 L240,220 L260,160 L400,160 L440,160 L460,60 L480,260 L500,100 L520,220 L540,160 L680,160 L720,160 L740,60 L760,260 L780,100 L800,220 L820,160 L960,160 L1000,160 L1020,60 L1040,260 L1060,100 L1080,220 L1100,160 L1240,160 L1280,160 L1300,60 L1320,260 L1340,100 L1360,220 L1380,160 L1440,160" />
+      </svg>
+    </div>
+
+    <div class="section-inner">
+      <h2 class="join-h2" id="join-heading" data-reveal="0">
+        Your Metabolism Won't Fix Itself. Start Today.
+      </h2>
+      <p class="join-sub" data-reveal="1">
+        Batch 02 is full. Batch 03 seats are strictly capped &mdash; join the priority waitlist and we'll call you first.
+      </p>
+      <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="join-cta" data-reveal="2">
+        Join the Priority Waitlist for Batch 03 &rarr;
+      </a>
+
+      <div class="contact-grid" data-reveal="3">
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">&#128222;</span>
+            <div class="contact-text">
+              <a href="tel:+919833991131">9833991131</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">&#128172;</span>
+            <div class="contact-text">
+              <a href="https://wa.me/919833991131" target="_blank" rel="noopener noreferrer">9833991131 (WhatsApp)</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">&#9993;</span>
+            <div class="contact-text">
+              <span class="placeholder-dark">[EMAIL]</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">&#128205;</span>
+            <div class="contact-text">
+              <a href="https://maps.app.goo.gl/n7DN4snnECSJjkRW8?g_st=iw" target="_blank" rel="noopener noreferrer">
+                Shop No. 11, Bhakti Anugan Tower,<br />
+                Sector 12A, Kopar Khairane,<br />
+                Navi Mumbai 400709
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.516854697476!2d73.01339!3d19.10897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c12e4e88291b%3A0x5eec9f5dfc2e5c0!2sKopar%20Khairane%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%"
+            height="100%"
+            style="border:0; border-radius:20px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Chetna Metabolics location in Kopar Khairane, Navi Mumbai"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-block">
+            <div class="footer-logo-icon">
+              <img src="assets/chetna-logo-icon.svg" alt="Chetna Metabolics" width="26" height="26" />
+            </div>
+            <span class="footer-logo-text">Chetna Metabolics</span>
+          </div>
+          <p class="footer-tagline">Doctor-led metabolic fitness &amp; nutrition centre in Navi Mumbai.</p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#method">Method</a></li>
+            <li><a href="#programmes">Programmes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer">
+                Instagram &#8599;
+              </a>
+            </li>
+            <li>
+              <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer">
+                Batch 03 Waitlist &#8599;
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/919833991131" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us &#8599;
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Chetna Metabolics. All rights reserved.<br />
+          Shop No. 11, Bhakti Anugan Tower, Sector 12A, Kopar Khairane, Navi Mumbai 400709
+        </p>
+        <p class="footer-disclaimer">
+          Results may vary. This programme is not a substitute for independent medical advice. Always consult your physician before beginning any new diet or exercise plan.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/919833991131"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="float-wa"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    /* =========================================
+       SCROLL PROGRESS BAR
+    ========================================= */
+    (function() {
+      var progress = document.getElementById('scrollProgress');
+      var header = document.getElementById('site-header');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+        if (progress) {
+          progress.style.width = pct + '%';
+        }
+
+        // Header glass state: transparent over hero, glass once scrolled past
+        if (header) {
+          if (scrollTop > window.innerHeight - 90) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* =========================================
+       HERO MOUSE PARALLAX
+    ========================================= */
+    (function() {
+      var heroBg = document.getElementById('heroBg');
+      if (!heroBg) return;
+
+      // Desktop only
+      if (window.matchMedia('(pointer: fine)').matches) {
+        var targetX = 0, targetY = 0;
+        var currentX = 0, currentY = 0;
+        var raf;
+
+        document.addEventListener('mousemove', function(e) {
+          var xRatio = (e.clientX / window.innerWidth - 0.5) * 2;
+          var yRatio = (e.clientY / window.innerHeight - 0.5) * 2;
+          targetX = xRatio * 12;
+          targetY = yRatio * 8;
+        });
+
+        function lerp(a, b, t) { return a + (b - a) * t; }
+
+        function animate() {
+          currentX = lerp(currentX, targetX, 0.05);
+          currentY = lerp(currentY, targetY, 0.05);
+          heroBg.style.transform = 'scale(1.08) translate(' + currentX + 'px, ' + currentY + 'px)';
+          raf = requestAnimationFrame(animate);
+        }
+
+        animate();
+      }
+    })();
+
+    /* =========================================
+       SCROLL REVEAL (IntersectionObserver)
+    ========================================= */
+    (function() {
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced) {
+        document.querySelectorAll('[data-reveal]').forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var delay = parseInt(entry.target.getAttribute('data-reveal') || '0', 10);
+            setTimeout(function() {
+              entry.target.classList.add('is-visible');
+            }, delay * 130);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('[data-reveal]').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    /* =========================================
+       HAMBURGER / MOBILE NAV
+    ========================================= */
+    (function() {
+      var hamburger = document.getElementById('hamburger');
+      var mobileNav = document.getElementById('mobileNav');
+
+      if (!hamburger || !mobileNav) return;
+
+      function toggleMenu() {
+        var isOpen = mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+
+      // Close on nav link click
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Close on escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+          toggleMenu();
+          hamburger.focus();
+        }
+      });
+    })();
+
+    /* =========================================
+       SMOOTH SCROLL WITH HEADER OFFSET
+    ========================================= */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          var target = document.querySelector(targetId);
+          if (!target) return;
+
+          e.preventDefault();
+
+          var headerHeight = document.getElementById('site-header')
+            ? document.getElementById('site-header').offsetHeight
+            : 80;
+
+          var targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+          window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        });
+      });
+    })();
+
+    /* =========================================
+       SCROLL PARALLAX (data-parallax)
+    ========================================= */
+    (function() {
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      if (!parallaxEls.length) return;
+
+      function onScroll() {
+        var scrollY = window.scrollY;
+        parallaxEls.forEach(function(el) {
+          var factor = parseFloat(el.getAttribute('data-parallax') || '0.2');
+          el.style.transform = 'translateY(' + scrollY * factor + 'px)';
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+</body>
+</html>

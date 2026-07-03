@@ -1,0 +1,12 @@
+# Design source files
+*.dc.html
+support.js
+.thumbnail
+Chetna Website.html
+
+# Uploads/source files
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
