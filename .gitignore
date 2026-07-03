@@ -7,6 +7,12 @@ Chetna Website.html
 # Uploads/source files
 uploads/
 
+# Netlify
+.netlify/
+
+# Screenshots
+preview-full.png
+
 # OS
 .DS_Store
 Thumbs.db
