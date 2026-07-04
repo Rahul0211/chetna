@@ -5,12 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chetna Metabolics | Doctor-Led Weight Loss, Fitness &amp; Nutrition in Navi Mumbai</title>
   <meta name="description" content="Medically supervised weight management by Dr. Mukesh M Chandra (physician, 15+ yrs). Nutrition, exercise, lifestyle &amp; prevention — join the next batch in Navi Mumbai." />
+  <meta name="keywords" content="weight loss Navi Mumbai, metabolic fitness, doctor led weight management, nutrition centre Kopar Khairane, Chetna Metabolics, Dr Mukesh Chandra, fitness programme Navi Mumbai" />
+  <meta name="author" content="Chetna Metabolic Fitness &amp; Nutrition Centre" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chetnametabolic.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" href="assets/chetna-logo-icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chetnametabolic.com/" />
   <meta property="og:title" content="Chetna Metabolics | Doctor-Led Weight Loss &amp; Nutrition in Navi Mumbai" />
   <meta property="og:description" content="A doctor-led fitness and nutrition centre where your weight-loss journey is designed, monitored, and adjusted by a physician with 15+ years of clinical experience." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/photo-outdoor-group.jpg" />
-  <link rel="icon" href="assets/chetna-logo-icon.svg" type="image/svg+xml" />
+  <meta property="og:image" content="https://chetnametabolic.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Chetna Metabolics" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chetna Metabolics | Doctor-Led Weight Loss &amp; Nutrition in Navi Mumbai" />
+  <meta name="twitter:description" content="A doctor-led fitness and nutrition centre where your weight-loss journey is designed, monitored, and adjusted by a physician with 15+ years of clinical experience." />
+  <meta name="twitter:image" content="https://chetnametabolic.com/assets/og-image.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Chetna Metabolic Fitness &amp; Nutrition Centre",
+    "description": "Doctor-led weight loss, fitness and nutrition programme in Navi Mumbai",
+    "url": "https://chetnametabolic.com",
+    "telephone": "+919833991131",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 11, Bhakti Anugan Tower, Sector 12A, Kopar Khairane",
+      "addressLocality": "Navi Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400709",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.1045,
+      "longitude": 73.0053
+    },
+    "image": "https://chetnametabolic.com/assets/og-image.jpg",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Sa 07:00-20:00"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -243,29 +292,11 @@
       justify-self: start;
     }
 
-    .header-logo-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
-      flex-shrink: 0;
-    }
-
-    .header-logo-icon img {
-      width: 24px;
-    }
-
-    .header-logo-text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      letter-spacing: 0.14em;
-      color: #ffffff;
-      text-transform: uppercase;
+    .header-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      border-radius: 6px;
     }
 
     /* Glass pill nav */
@@ -1742,7 +1773,12 @@
 
       .header-inner {
         grid-template-columns: 1fr auto;
-        padding: 16px 24px;
+        padding: 12px 16px;
+      }
+
+      .header-logo-img {
+        height: 36px;
+        border-radius: 5px;
       }
 
       .hero-content {
@@ -1901,6 +1937,166 @@
       }
     }
 
+    /* =========================================
+       FOOTER JPEG LOGO
+    ========================================= */
+    .footer-logo-block--jpeg {
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-jpeg {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 10px 14px;
+      display: block;
+    }
+
+    /* =========================================
+       CORE TEAM SECTION
+    ========================================= */
+    .team-section {
+      padding: 100px 0 120px;
+      background: var(--bg);
+    }
+
+    .team-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 0;
+      padding: 0 40px;
+    }
+
+    .team-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: #0E3B43;
+      margin-top: 20px;
+      margin-bottom: 16px;
+    }
+
+    .team-subtext {
+      font-size: 17px;
+      color: var(--secondary-text);
+      line-height: 1.7;
+      max-width: 680px;
+      margin-bottom: 64px;
+    }
+
+    .team-founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .team-members-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .team-card {
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      padding: 36px 28px 32px;
+      border: 1px solid rgba(14,60,67,0.08);
+      box-shadow: 0 4px 24px rgba(14,59,67,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(14,59,67,0.12);
+    }
+
+    .team-card--founder .team-photo {
+      width: 180px;
+      height: 180px;
+    }
+
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin: 0 auto 24px;
+      border: 3px solid rgba(95,173,65,0.30);
+      box-shadow: 0 4px 20px rgba(14,59,67,0.12);
+    }
+
+    .team-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #0E3B43;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .team-card--founder .team-name {
+      font-size: 22px;
+    }
+
+    .team-role {
+      font-size: 12px;
+      font-weight: 600;
+      color: #5FAD41;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .team-bio {
+      font-size: 15px;
+      color: #4A6A70;
+      line-height: 1.72;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .team-founders-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .team-members-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .team-section {
+        padding: 72px 0 80px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-members-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-founders-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-card--founder .team-photo {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1929,16 +2125,13 @@
     <div class="scroll-progress" id="scrollProgress"></div>
     <div class="header-inner">
       <a href="#top" class="header-logo">
-        <div class="header-logo-icon">
-          <img src="assets/chetna-logo-icon.svg" alt="Chetna Metabolics icon" width="24" height="24" />
-        </div>
-        <span class="header-logo-text">Chetna</span>
+        <img src="assets/chetna-logo-full.jpeg" alt="Chetna Metabolics" class="header-logo-img" />
       </a>
 
       <nav class="header-nav" aria-label="Main navigation">
         <a href="#method">Method</a>
         <a href="#programmes">Programmes</a>
-        <a href="#about">About</a>
+        <a href="#about">Team</a>
         <a href="#faq">FAQ</a>
         <a href="#join">Contact</a>
       </nav>
@@ -1960,7 +2153,7 @@
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
     <a href="#method" class="mobile-nav-link">Method</a>
     <a href="#programmes" class="mobile-nav-link">Programmes</a>
-    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#about" class="mobile-nav-link">Team</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
     <a href="#join" class="mobile-nav-link">Contact</a>
     <a href="https://forms.gle/omi3uyQDxr5gV7HC7" target="_blank" rel="noopener noreferrer" class="mobile-nav-link mobile-cta">Join Batch 03</a>
@@ -2217,46 +2410,96 @@
     </div>
   </section>
 
-  <!-- MEET DR. CHANDRA -->
-  <section class="about-section" id="about" aria-labelledby="about-heading">
+  <!-- CORE TEAM -->
+  <section class="team-section" id="about" aria-labelledby="team-heading">
     <div class="section-inner">
-      <div class="section-label" data-reveal="0">04 &mdash; Meet Dr. Mukesh M Chandra</div>
-      <div class="about-grid">
-        <div class="about-photo-wrap" data-reveal="1">
-          <div class="about-photo-frame">
-            <img
-              src="assets/photo-team.jpg"
-              alt="Dr. Mukesh M Chandra, medical director of Chetna Metabolics"
-              class="about-photo"
-              loading="lazy"
-            />
-          </div>
-          <div class="about-badge" aria-label="15 plus years experience">
-            <span class="about-badge-num">15+</span>
-            <span class="about-badge-label">Years<br>Clinical</span>
-          </div>
-        </div>
+      <div class="section-label" data-reveal="0">04 &mdash; CORE TEAM</div>
+      <h2 class="team-h2" id="team-heading" data-reveal="1">
+        ONE TEAM.<br />
+        <span class="outlined-text-green">ONE CANOPY.</span>
+      </h2>
+      <p class="team-subtext" data-reveal="2">
+        Medical practitioners, clinical nutrition specialists, certified functional fitness instructors, and endurance coaches &mdash; one collaborative point of oversight.
+      </p>
 
-        <div class="about-content" data-reveal="2">
-          <h2 class="about-h2" id="about-heading">
-            <span class="outlined-text-green">Your Coach</span><br />
-            Is a Doctor.
-          </h2>
-          <p class="about-body">
-            Dr. Mukesh M Chandra is a physician with over 15 years of clinical experience in metabolic health, lifestyle medicine, and disease reversal.
-          </p>
-          <p class="about-body">
-            His approach is uncompromising: every patient is mapped biometrically before a single recommendation is made. Diet charts, movement plans, and lifestyle protocols are derived entirely from blood panel data and clinical history &mdash; never from generic templates.
-          </p>
+      <!-- Founders row: 2 columns -->
+      <div class="team-founders-grid">
 
-          <blockquote class="about-pullquote">
-            "Weight loss is a byproduct. Metabolic repair is the mission. When the engine runs right, everything else follows."
-          </blockquote>
-
-          <p class="about-reg">
-            Physician &middot; 15+ years clinical experience
+        <div class="team-card team-card--founder" data-reveal="3">
+          <img
+            src="assets/team-dr-mukesh.jpeg"
+            alt="Dr. Mukesh M. Chandra, Founder and Chief Consultant"
+            class="team-photo"
+            loading="lazy"
+          />
+          <div class="team-name">Dr. Mukesh M. Chandra</div>
+          <div class="team-role">Founder &amp; Chief Consultant &mdash; Metabolic Medicine</div>
+          <p class="team-bio">
+            Dr. Mukesh M. Chandra is a seasoned physician with over 15 years of clinical experience specializing in the management and reversal of chronic metabolic disorders. Driven by a data-backed approach to healthcare, his core focus centers on addressing the biological root causes of lifestyle conditions, helping individuals systematically optimize their baseline metabolic markers and restore long-term vitality.
           </p>
         </div>
+
+        <div class="team-card team-card--founder" data-reveal="4">
+          <img
+            src="assets/team-dr-mital.jpeg"
+            alt="Dr. Mital M. Chandra, Co-Founder and Chief Medical Advisor"
+            class="team-photo"
+            loading="lazy"
+          />
+          <div class="team-name">Dr. Mital M. Chandra</div>
+          <div class="team-role">Co-Founder &amp; Chief Medical Advisor &mdash; Interventional Cardiology</div>
+          <p class="team-bio">
+            Dr. Mital M. Chandra is a highly accomplished Interventional Cardiologist with a decade of advanced clinical experience in cardiovascular health. Dedicated to preventative medicine and metabolic wellness, Dr. Mital provides expert medical oversight to ensure all training protocols are safe, effective, and tailored to cardiovascular longevity. She is currently attached as a Consultant Interventional Cardiologist with premier healthcare institutions across the region, including Fortis Hospital (Vashi), Reliance Hospital (Navi Mumbai), and MGM Hospital (Vashi).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Team row: 3 columns -->
+      <div class="team-members-grid">
+
+        <div class="team-card" data-reveal="5">
+          <img
+            src="assets/team-chetna-gori.jpeg"
+            alt="Chetna Gori, Head of Movement and Functional Fitness"
+            class="team-photo"
+            loading="lazy"
+          />
+          <div class="team-name">Chetna Gori</div>
+          <div class="team-role">Head of Movement &amp; Functional Fitness</div>
+          <p class="team-bio">
+            Chetna Gori leads the holistic and dynamic movement vertical at the center, blending functional agility with rhythmic conditioning. As a certified Yoga Instructor, Zumba Instructor, and Elite Fitness Coach, Chetna specializes in crafting engaging, high-energy group dynamics that accelerate metabolic rate, improve core strength, and make daily physical movement an inspiring celebration rather than a chore.
+          </p>
+        </div>
+
+        <div class="team-card" data-reveal="6">
+          <img
+            src="assets/team-dr-tejashma.jpeg"
+            alt="Dr. Tejashma Khandagale, Head of Physical Rehabilitation"
+            class="team-photo"
+            loading="lazy"
+          />
+          <div class="team-name">Dr. Tejashma Khandagale</div>
+          <div class="team-role">Head of Physical Rehabilitation &amp; Structural Health</div>
+          <p class="team-bio">
+            Dr. Tejashma Khandagale is an expert Physiotherapist with 12 years of specialized clinical experience in biomechanics and physical rehabilitation. With a deep focus on complex spine injuries, stroke rehabilitation, and high-performance sports injury rehabilitation, Dr. Tejashma ensures that every participant's unique structural constraints, joint limitations, or past injuries are explicitly evaluated and safely accommodated within the program.
+          </p>
+        </div>
+
+        <div class="team-card" data-reveal="7">
+          <img
+            src="assets/team-kishor-nandi.jpeg"
+            alt="Kishor Nandi, Head Coach Strength and Conditioning"
+            class="team-photo"
+            loading="lazy"
+          />
+          <div class="team-name">Kishor Nandi</div>
+          <div class="team-role">Head Coach &mdash; Strength &amp; Conditioning</div>
+          <p class="team-bio">
+            Kishor Nandi brings over a decade of elite training expertise to the center, specializing in intensive functional training and CrossFit modalities. With 10+ years of hands-on experience in the fitness industry, Kishor is an expert in personal body transformations, helping individuals safely break through plateaus, build lean muscle mass, and develop functional daily endurance.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -2478,11 +2721,12 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div class="footer-logo-block">
-            <div class="footer-logo-icon">
-              <img src="assets/chetna-logo-icon.svg" alt="Chetna Metabolics" width="26" height="26" />
-            </div>
-            <span class="footer-logo-text">Chetna Metabolics</span>
+          <div class="footer-logo-block footer-logo-block--jpeg">
+            <img
+              src="assets/chetna-logo-full.jpeg"
+              alt="Chetna Metabolics"
+              class="footer-logo-jpeg"
+            />
           </div>
           <p class="footer-tagline">Doctor-led metabolic fitness &amp; nutrition centre in Navi Mumbai.</p>
         </div>
@@ -2492,7 +2736,7 @@
           <ul class="footer-links">
             <li><a href="#method">Method</a></li>
             <li><a href="#programmes">Programmes</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Team</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
