@@ -2097,6 +2097,145 @@
       }
     }
 
+    /* =========================================
+       TESTIMONIALS
+    ========================================= */
+    .testimonials-section {
+      padding: 100px 0 120px;
+      background: var(--bg);
+      border-top: 1px solid rgba(14,124,123,0.08);
+    }
+
+    .testimonials-section .section-label {
+      max-width: 1200px;
+      margin: 0 auto 0;
+      padding: 0 40px;
+    }
+
+    .testimonials-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: #0E3B43;
+      margin-top: 20px;
+      margin-bottom: 56px;
+    }
+
+    .testimonial-list {
+      display: grid;
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      display: grid;
+      grid-template-columns: minmax(0, 340px) 1fr;
+      margin: 0;
+      background: var(--dark-bg);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(14,59,67,0.16);
+    }
+
+    .testimonial-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .testimonial-body {
+      position: relative;
+      padding: 56px 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .testimonial-mark {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 0.7;
+      color: #8BC34A;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-quote {
+      margin: 0 0 32px;
+    }
+
+    .testimonial-quote p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.92);
+      margin: 0 0 16px;
+    }
+
+    .testimonial-quote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .testimonial-author {
+      padding-top: 24px;
+      border-top: 1px solid rgba(139,195,74,0.25);
+    }
+
+    .testimonial-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .testimonial-meta {
+      font-size: 12px;
+      font-weight: 600;
+      color: #8BC34A;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 72px 0 80px;
+      }
+
+      .testimonials-section .section-label {
+        padding: 0 20px;
+      }
+
+      .testimonials-h2 {
+        margin-bottom: 36px;
+      }
+
+      .testimonial-card {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-photo {
+        min-height: 0;
+        aspect-ratio: 1 / 1;
+      }
+
+      .testimonial-body {
+        padding: 36px 24px 32px;
+      }
+
+      .testimonial-mark {
+        font-size: 72px;
+      }
+
+      .testimonial-quote p {
+        font-size: 17px;
+      }
+    }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -2573,6 +2712,41 @@
         <a href="https://www.instagram.com/chetna_metabolics" target="_blank" rel="noopener noreferrer" class="photo-cell photo-team">
           <img src="assets/photo-team.jpg" alt="The Chetna team" loading="lazy" />
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="section-inner">
+      <div class="section-label" data-reveal="0">07 &mdash; Testimonials</div>
+      <h2 class="testimonials-h2" id="testimonials-heading" data-reveal="1">
+        <span class="outlined-text-green">Real People.</span><br />
+        Real Change.
+      </h2>
+
+      <div class="testimonial-list">
+
+        <figure class="testimonial-card" data-reveal="2">
+          <img
+            src="assets/testimonial-krina-shah.jpg"
+            alt="Krina Gaurav Shah"
+            class="testimonial-photo"
+            loading="lazy"
+          />
+          <div class="testimonial-body">
+            <div class="testimonial-mark" aria-hidden="true">&ldquo;</div>
+            <blockquote class="testimonial-quote">
+              <p>It was a really wonderful experience, and I genuinely appreciate the discipline it brought into my life. Daily walking, alternate-day exercise, and physiotherapy made a huge difference.</p>
+              <p>Even my diet helped me stay away from junk food, and I noticed many positive changes in my body, flexibility, and energy levels. I truly enjoyed the entire concept.</p>
+            </blockquote>
+            <figcaption class="testimonial-author">
+              <div class="testimonial-name">Krina Gaurav Shah</div>
+              <div class="testimonial-meta">Chetna Metabolics Member</div>
+            </figcaption>
+          </div>
+        </figure>
+
       </div>
     </div>
   </section>
